@@ -1,6 +1,9 @@
 USE master;
 GO
 
+DROP DATABASE fieb_tours;
+GO
+
 -- Criar o banco novamente
 CREATE DATABASE fieb_tours;
 GO
@@ -70,11 +73,11 @@ GO
 
 -- Inserir um aluno
 INSERT INTO dbo.alunos (rm, nome, turma, numeroChamada, senhaBase64)
-VALUES ('12345', 'João Silva', '3A', 10, 'c2VuaGExMjM=');  -- senha "senha123" em Base64
+VALUES ('90341', 'Luan', '3C', 10, 'c2VuaGExMjM=');  -- senha "senha123" em Base64
 
 -- Inserir um gerenciador
 INSERT INTO dbo.gerenciadores (nome, senhaBase64, unidade, email)
-VALUES ('Maria Souza', 'YWRtaW4xMjM=', 'Unidade Central', 'maria.souza@fieb.com'); -- senha "admin123" em Base64
+VALUES ('Igor Macedo', 'YWRtaW4xMjM=', 'Unidade Central', 'igormacedoferreira70@gmail.com'); -- senha "admin123" em Base64
 
 
 -- Consultas de teste

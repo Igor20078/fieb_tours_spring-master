@@ -74,5 +74,14 @@ public class ReservaController {
 
         reservaRepository.delete(reserva);
     }
+
+    // Listar reservas de um usuário específico
+    @GetMapping("/usuario/{rm}")
+    public List<Reserva> getReservasByUsuario(@PathVariable String rm) {
+        Aluno aluno = alunoRepository.findByRm(rm)
+                .orElseThrow(() -> new RuntimeException("Aluno não encontrado"));
+        
+        return reservaRepository.findByNome(aluno.getNome());
+    }
     
 }
